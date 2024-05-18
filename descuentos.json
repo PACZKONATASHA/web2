@@ -1,8 +1,10 @@
-{{"id" :1, "descuentos":30};
-{"id": 2, "descuentos":30};
-{"id": 3, "descuentos":30},;
+[
+    
+{"id":1, "descuento" :30},
+{"id":2, "descuento":20},
+{"id":3, "descuento":10}
 
 
 
 
-}
+]
