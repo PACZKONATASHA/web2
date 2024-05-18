@@ -1,0 +1,23 @@
+html 
+head 
+style. 
+         .grilla {
+                  display: grid;
+                   grid-template-columns: 1fr 1 fr 1fr 1fr};
+                                                 
+         
+                      
+      
+                  
+
+
+
+body 
+h1 productos fakes 
+.grilla 
+    each producto in productos
+       .producto 
+        h5 = pruducto.title 
+        p = producto.description 
+        img(src=producto.image,width="200px")
+        h5= producto.price
