@@ -5,7 +5,7 @@ const app = express ();
 app.use(express.static("public")); //para cargar los archivos estaticos 
 
 app.set("view engine","pug"); 
-app.set("views",".vistas");
+app.set("views","./vistas");
 
 app.get ('/', async (req
     ,res) => {
