@@ -2,7 +2,7 @@ const express = require("express");
 const pug = require("pug");
 const app = express();
 const traductor = require("node-google-translate-skidz");
-const fs = require("fs").promises;
+const fs = require("fs");
 
 app.use(express.static("public")); //para cargar los archivos estaticos 
 
@@ -36,7 +36,7 @@ app.get("/", async (req, res) => {
 
 let desc;
 for (producto of productos) {
-desc = descuentos.fi((descuento) => {
+desc = descuentos.filter((descuento ) => {
     return descuentos.id === producto.id;
 });
 if (desc.length > 0) {
@@ -45,7 +45,8 @@ if (desc.length > 0) {
     }
 }
 
-    console.log();
+
+    console.log(productos);
     //aplicar descuentos
     res.render("index", { productos: productos });
 });

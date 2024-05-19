@@ -3,6 +3,7 @@ html
     style. 
         .grilla {display: grid;
                 grid-template-columns: 1fr 1fr 1fr 1fr};
+    script(src="/js/scripst.js")
 
     body 
         h1 Productos Fakes 
@@ -12,4 +13,9 @@ html
                     h5=productos.title 
                     p= producto.description 
                     img(src=producto.image,width="200px") 
-                    h5 = producto.price
+                    if producto.descuento 
+                       h5 #{producto.price * producto. 
+                            descuento /100}
+                   button.btn-agregar(id=producto.id) Agregar
+            
+                    
