@@ -1,0 +1,21 @@
+html 
+    head 
+    script 
+        //logica para decrementar
+        //logica para incrementar
+        //logica para eliminar prod del carrito
+        function comprar(){
+            //tomarian datos del carrito
+            //compra.....
+            fetch("/comprar",{
+                method: post,
+                body: JSON.stringify(compra)
+            }).then(response => response.json()).then(
+                result =>{
+                    if(result.error)
+                }
+            )
+        }
+    body 
+        //carrito
+        button(id="comprar", onclick="comprar") Comprar
